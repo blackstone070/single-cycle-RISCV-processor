@@ -1,0 +1,45 @@
+    // INI 
+    00500093    // addi x1, x0, 5
+    00A00113    // addi x2, x0, 10
+    FFF00193    // addi x3, x0, -1
+    00100213    // addi x4, x0, 1
+    
+    // R
+    002081B3    // add  x3,x1,x2
+    40208233    // sub  x4,x1,x2
+    0020F2B3    // and  x5,x1,x2
+    0020E333    // or   x6,x1,x2
+    0020C3B3    // xor  x7,x1,x2
+    00209433    // sll  x8,x1,x2
+    0020D4B3    // srl  x9,x1,x2
+    4020D533    // sra  x10,x1,x2
+    0020A5B3    // slt  x11,x1,x2
+    0020B633    // sltu x12,x1,x2
+    
+    
+    00102023    // sw x1,0(x0)
+    00002683    // lw x13,0(x0)
+    
+    
+    00108463    // beq x1,x1,+8      (taken)
+    00209563    // bne x1,x2,+8      (taken)
+    0020C663    // blt x1,x2,+8      (taken)
+    00115663    // bge x2,x1,+8      (taken)
+    0020E663    // bltu x1,x2,+8     (taken)
+    00117663    // bgeu x2,x1,+8     (taken)
+    
+    
+    12345737    // lui x14,0x12345
+    12345797    // auipc x15,0x12345
+    
+    0080086F    // jal x16,+8
+    
+    00100893    // addi x17,x0,1   (should be skipped)
+    
+    00200913    // addi x18,x0,2   (JAL target)
+    
+    00090067    // jalr x0,0(x18)
+    
+    00000013    // nop
+    00000013    // nop
+    00000013    // nop
